@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Compile the tests
-                sh 'javac -sourcepath src/main/java -cp junit-platform-console-standalone-1.4.0.jar;. src/test/java/com/example/math/TestCalculator.java'
+                sh 'javac -sourcepath src/main/java -cp junit-platform-console-standalone-1.4.0.jar src/test/java/com/example/math/TestCalculator.java'
                 // Run the tests
                 sh 'java -jar junit-platform-console-standalone-1.4.0.jar --class-path target --scan-class-path --reports-dir=target/surefire-reports/'
             }
