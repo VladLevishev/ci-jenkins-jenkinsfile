@@ -6,7 +6,7 @@ pipeline {
                 // Download the code
                 checkout scm
                 // Compile the main class
-                sh 'javac -d target -sourcepath src/main/java src/main/java/com/example/math/Calculator.java'
+                sh 'javac -d target -sourcepath src/main src/main/java/com/example/math/Calculator.java'
             }
         }
         stage('Test') {
